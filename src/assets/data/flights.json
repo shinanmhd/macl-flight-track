@@ -1,0 +1,274 @@
+[
+    {
+      "id": 1,
+      "flightCode": "MV201",
+      "airline": "Maldivian",
+      "fromCountry": "KUL",
+      "fromTime": "11:00 am",
+      "toCountry": "MDV",
+      "toTime": "12:00 pm",
+      "tripDuration": "1h",
+      "terminal": "1",
+      "gate": "D4",
+      "updated": "12 min ago",
+      "status": {
+        "name": "On-Time",
+        "color": "#00BB5E"
+      }
+    },
+    {
+      "id": 2,
+      "flightCode": "SL102",
+      "airline": "SriLankan Airlines",
+      "fromCountry": "CMB",
+      "fromTime": "12:30 pm",
+      "toCountry": "MDV",
+      "toTime": "1:30 pm",
+      "tripDuration": "1h",
+      "terminal": "2",
+      "gate": "A2",
+      "updated": "5 min ago",
+      "status": {
+        "name": "Delayed",
+        "color": "#FFA500"
+      }
+    },
+    {
+      "id": 3,
+      "flightCode": "EK303",
+      "airline": "Emirates",
+      "fromCountry": "DXB",
+      "fromTime": "4:00 pm",
+      "toCountry": "MDV",
+      "toTime": "7:00 pm",
+      "tripDuration": "3h",
+      "terminal": "3",
+      "gate": "B7",
+      "updated": "20 min ago",
+      "status": {
+        "name": "On-Time",
+        "color": "#00BB5E"
+      }
+    },
+    {
+      "id": 4,
+      "flightCode": "QR404",
+      "airline": "Qatar Airways",
+      "fromCountry": "DOH",
+      "fromTime": "9:30 am",
+      "toCountry": "MDV",
+      "toTime": "12:30 pm",
+      "tripDuration": "3h",
+      "terminal": "1",
+      "gate": "C3",
+      "updated": "1h ago",
+      "status": {
+        "name": "Cancelled",
+        "color": "#FF0066"
+      }
+    },
+    {
+      "id": 5,
+      "flightCode": "BA505",
+      "airline": "British Airways",
+      "fromCountry": "LHR",
+      "fromTime": "2:00 pm",
+      "toCountry": "MDV",
+      "toTime": "10:00 pm",
+      "tripDuration": "8h",
+      "terminal": "5",
+      "gate": "E1",
+      "updated": "30 min ago",
+      "status": {
+        "name": "On-Time",
+        "color": "#00BB5E"
+      }
+    },
+    {
+      "id": 6,
+      "flightCode": "SQ606",
+      "airline": "Singapore Airlines",
+      "fromCountry": "SIN",
+      "fromTime": "10:00 am",
+      "toCountry": "MDV",
+      "toTime": "1:00 pm",
+      "tripDuration": "3h",
+      "terminal": "2",
+      "gate": "F5",
+      "updated": "45 min ago",
+      "status": {
+        "name": "Delayed",
+        "color": "#FFA500"
+      }
+    },
+    {
+      "id": 7,
+      "flightCode": "LH707",
+      "airline": "Lufthansa",
+      "fromCountry": "FRA",
+      "fromTime": "6:00 am",
+      "toCountry": "MDV",
+      "toTime": "2:00 pm",
+      "tripDuration": "8h",
+      "terminal": "1",
+      "gate": "G2",
+      "updated": "1h 15 min ago",
+      "status": {
+        "name": "On-Time",
+        "color": "#00BB5E"
+      }
+    },
+    {
+      "id": 8,
+      "flightCode": "AF808",
+      "airline": "Air France",
+      "fromCountry": "CDG",
+      "fromTime": "1:00 pm",
+      "toCountry": "MDV",
+      "toTime": "9:00 pm",
+      "tripDuration": "8h",
+      "terminal": "2",
+      "gate": "H8",
+      "updated": "2h ago",
+      "status": {
+        "name": "Cancelled",
+        "color": "#FF0066"
+      }
+    },
+    {
+      "id": 9,
+      "flightCode": "KL909",
+      "airline": "KLM",
+      "fromCountry": "AMS",
+      "fromTime": "8:00 am",
+      "toCountry": "MDV",
+      "toTime": "4:00 pm",
+      "tripDuration": "8h",
+      "terminal": "3",
+      "gate": "I4",
+      "updated": "30 min ago",
+      "status": {
+        "name": "On-Time",
+        "color": "#00BB5E"
+      }
+    },
+    {
+      "id": 10,
+      "flightCode": "AZ1010",
+      "airline": "Alitalia",
+      "fromCountry": "FCO",
+      "fromTime": "3:00 pm",
+      "toCountry": "MDV",
+      "toTime": "11:00 pm",
+      "tripDuration": "8h",
+      "terminal": "1",
+      "gate": "J6",
+      "updated": "45 min ago",
+      "status": {
+        "name": "Delayed",
+        "color": "#FFA500"
+      }
+    },
+    {
+      "id": 11,
+      "flightCode": "AA1111",
+      "airline": "American Airlines",
+      "fromCountry": "JFK",
+      "fromTime": "5:00 pm",
+      "toCountry": "MDV",
+      "toTime": "1:00 am",
+      "tripDuration": "8h",
+      "terminal": "4",
+      "gate": "K2",
+      "updated": "1h ago",
+      "status": {
+        "name": "On-Time",
+        "color": "#00BB5E"
+      }
+    },
+    {
+      "id": 12,
+      "flightCode": "DL1212",
+      "airline": "Delta Airlines",
+      "fromCountry": "ATL",
+      "fromTime": "12:00 pm",
+      "toCountry": "MDV",
+      "toTime": "8:00 pm",
+      "tripDuration": "8h",
+      "terminal": "2",
+      "gate": "L7",
+      "updated": "2h ago",
+      "status": {
+        "name": "Cancelled",
+        "color": "#FF0066"
+      }
+    },
+    {
+      "id": 13,
+      "flightCode": "UA1313",
+      "airline": "United Airlines",
+      "fromCountry": "SFO",
+      "fromTime": "9:00 am",
+      "toCountry": "MDV",
+      "toTime": "5:00 pm",
+      "tripDuration": "8h",
+      "terminal": "3",
+      "gate": "M3",
+      "updated": "30 min ago",
+      "status": {
+        "name": "On-Time",
+        "color": "#00BB5E"
+      }
+    },
+    {
+      "id": 14,
+      "flightCode": "AC1414",
+      "airline": "Air Canada",
+      "fromCountry": "YYZ",
+      "fromTime": "2:00 pm",
+      "toCountry": "MDV",
+      "toTime": "10:00 pm",
+      "tripDuration": "8h",
+      "terminal": "1",
+      "gate": "N5",
+      "updated": "45 min ago",
+      "status": {
+        "name": "Delayed",
+        "color": "#FFA500"
+      }
+    },
+    {
+      "id": 15,
+      "flightCode": "CX1515",
+      "airline": "Cathay Pacific",
+      "fromCountry": "HKG",
+      "fromTime": "10:00 am",
+      "toCountry": "MDV",
+      "toTime": "6:00 pm",
+      "tripDuration": "8h",
+      "terminal": "2",
+      "gate": "O1",
+      "updated": "1h ago",
+      "status": {
+        "name": "On-Time",
+        "color": "#00BB5E"
+      }
+    },
+    {
+      "id": 16,
+      "flightCode": "QF1616",
+      "airline": "Qantas",
+      "fromCountry": "SYD",
+      "fromTime": "6:00 am",
+      "toCountry": "MDV",
+      "toTime": "2:00 pm",
+      "tripDuration": "8h",
+      "terminal": "1",
+      "gate": "O1",
+      "updated": "1h ago",
+      "status": {
+        "name": "On-Time",
+        "color": "#00BB5E"
+      }
+    }
+]

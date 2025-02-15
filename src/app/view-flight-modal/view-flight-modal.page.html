@@ -1,0 +1,157 @@
+<div class="flex flex-col gap-y-4 p-6 min-h-screen bg-white dark:bg-slate-800 relative overflow-y-scroll">
+
+  <div class="flex flex-col sticky top-0 bg-white dark:bg-slate-800">
+    <div class="pt-10 pb-4 flex items-center justify-between">
+      <a class="cursor-pointer text-night-blue dark:text-white" (click)="cancel()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8">
+          <path fill-rule="evenodd" d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
+        </svg>      
+      </a>
+      
+      <div class="flex-grow flex items-center justify-center">
+        <h1 class="text-xs text-gray-400">{{ flight.updated }}</h1>
+      </div>
+  
+      @if(isFlightAlreadySaved)
+      {
+        <a class="p-2 text-rose-500" (click)="removeFlight(flight.id)">
+          <svg class="w-4 h-auto" viewBox="0 0 20 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.6573 1.01048C15.0183 -0.82554 11.7596 0.0312675 10.0003 2.13249C8.24095 0.0312675 4.9822 -0.83574 2.34322 1.01048C0.943757 1.98968 0.0640948 3.6421 0.00411789 5.38631C-0.135828 9.34395 3.30285 12.5162 8.55083 17.3816L8.65079 17.4734C9.4105 18.1772 10.5801 18.1772 11.3398 17.4632L11.4497 17.3612C16.6977 12.506 20.1264 9.33375 19.9964 5.37611C19.9365 3.6421 19.0568 1.98968 17.6573 1.01048Z" fill="currentColor"/>
+          </svg>        
+        </a>
+      }
+      @else 
+      {
+        <a class="p-2 text-slate-200 dark:text-slate-600" (click)="saveFlight(flight)">
+          <svg class="w-4 h-auto" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.6573 1.01048C15.0183 -0.82554 11.7596 0.0312675 10.0003 2.13249C8.24095 0.0312675 4.9822 -0.83574 2.34322 1.01048C0.943757 1.98968 0.0640948 3.6421 0.00411789 5.38631C-0.135828 9.34395 3.30285 12.5162 8.55083 17.3816L8.65079 17.4734C9.4105 18.1772 10.5801 18.1772 11.3398 17.4632L11.4497 17.3612C16.6977 12.506 20.1264 9.33375 19.9964 5.37611C19.9365 3.6421 19.0568 1.98968 17.6573 1.01048Z" fill="currentColor"/>
+          </svg>        
+        </a>
+      }
+    </div>
+    
+    <!-- <div class="w-full flex items-center justify-between py-4">
+      
+    </div> -->
+  
+  
+    <div class="w-full flex items-center justify-between">
+      <h1 class="text-gray-800 dark:text-white">{{ flight.airline }} {{ flight.flightCode }}</h1>
+      <div class="rounded-md px-2 p-1.5 text-white text-xs font-medium" [ngStyle]="{'background-color': flight.status.color}">
+        {{ flight.status.name }}
+      </div>
+    </div>
+  
+  
+    <div class="flex items-start justify-between gap-x-8 mb-4 mt-2">
+        
+      <div class="flex flex-col">
+        <div class="text-3xl font-black text-night-blue dark:text-white">{{ flight.fromCountry }}</div>
+        <div class="text-sm font-light text-night-blue dark:text-white">{{ flight.fromTime }}</div>
+      </div>
+  
+      <div class="items-center flex flex-col flex-grow pt-2">
+        <div class="text-sm font-light text-night-blue dark:text-white">{{ flight.tripDuration }}</div>
+        
+        <div class="w-full flex items-center justify-between">
+          <div class="w-2 h-2 rounded-full bg-gray-300">&nbsp;</div>
+          <div class="w-full h-0.5 bg-gray-300 flex-grow">&nbsp;</div>
+          <div class="w-2 h-2 rounded-full bg-gray-300">&nbsp;</div>
+        </div>
+  
+      </div>
+  
+      <div class="flex flex-col">
+        <div class="text-3xl font-black text-night-blue dark:text-white">{{ flight.toCountry }}</div>
+        <div class="text-sm font-light text-night-blue dark:text-white">{{ flight.toTime }}</div>
+      </div>
+      
+    </div>
+  </div>
+
+
+  @if(flight_detail) {
+    <div class="rounded-md border border-gray-200 dark:border-slate-950 flex flex-col">
+      <div class="flex p-4">
+        <!-- details -->
+        <div class="flex flex-col flex-grow">
+          <h1 class="text-gray-800 dark:text-white text-sm mb-2">{{ flight_detail.departure.airportName }} Fri, 14 Feb</h1>
+          
+          <h1 class="text-gray-600 dark:text-white text-sm">Estimated departure</h1>
+          <h1 class="text-gray-800 dark:text-white text-lg font-semibold mb-2">{{ flight_detail.departure.estimatedTime }}</h1>
+  
+          <h1 class="text-gray-600 dark:text-white text-sm">Scheduled departure {{ flight_detail.departure.scheduledTime }}</h1>
+        </div>
+  
+        <!-- icon -->
+        <div class="">
+          <svg class="w-8 h-8" viewBox="0 0 32 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.72171 10.6062L4.57748 10.0004C4.2185 9.88824 3.33901 9.75812 2.69286 10.135C1.88517 10.6062 0.875552 11.8177 2.42363 13.837C3.97171 15.8562 5.11594 17.337 5.72171 17.7408C5.74776 17.7582 5.77468 17.7763 5.80247 17.795C6.42097 18.2111 7.47097 18.9176 8.95247 18.1447C10.1909 17.4985 23.6031 10.4267 30.1544 6.97158C30.8723 6.59017 32.1736 5.43696 31.6352 3.87542C30.9842 1.98758 29.9554 1.98857 27.7573 1.99066C27.6827 1.99074 27.6067 1.99081 27.5294 1.99081H24.2986C24.0967 2.01324 23.5582 2.11196 23.0198 2.32735C22.4813 2.54273 19.9236 3.53888 18.7121 4.01004C18.5775 4.05491 18.2006 4.09081 17.7698 3.87542C17.339 3.66004 12.8788 1.3626 10.7025 0.240807C10.0518 -0.0284235 8.50824 -0.297654 7.53901 0.779269C6.32747 2.12542 6.26017 3.60619 8.48132 5.55811C10.2582 7.11965 11.1512 7.91388 11.3755 8.11581C11.6672 8.31773 12.0756 8.81581 11.3755 9.19273C10.6756 9.56965 8.66081 10.6062 7.74093 11.0773C7.53901 11.1671 7.02747 11.2927 6.5967 11.0773C6.16593 10.862 5.83388 10.6735 5.72171 10.6062ZM0 21H31.7692V19.1154H0V21Z" fill="#41EDCE"/>
+          </svg>          
+        </div>
+      </div>
+  
+      <div class="bg-slate-100 dark:bg-slate-950 p-4 flex items-center py-2">
+        <div class="flex flex-col flex-1">
+          <h1 class="text-gray-600 dark:text-white text-xs">Terminal</h1>
+          <h1 class="text-gray-800 dark:text-white text-lg font-semibold">{{ flight_detail.departure.terminal }}</h1>
+        </div>
+  
+        <div class="flex flex-col flex-1">
+          <h1 class="text-gray-600 dark:text-white text-xs">Gate</h1>
+          <h1 class="text-gray-800 dark:text-white text-lg font-semibold">{{ flight_detail.departure.gate }}</h1>
+        </div>
+  
+        <div class="flex flex-col flex-1">
+          <h1 class="text-gray-600 dark:text-white text-xs whitespace-normal">Check-in Counter</h1>
+          <h1 class="text-gray-800 dark:text-white text-lg font-semibold">{{ flight_detail.departure.checkinCounter }}</h1>
+        </div>
+      </div>
+    </div>
+  
+  
+  
+    <div class="rounded-md border border-gray-200 dark:border-slate-950 flex flex-col">
+      <div class="flex p-4">
+        <!-- details -->
+        <div class="flex flex-col flex-grow">
+          <h1 class="text-gray-800 dark:text-white text-sm mb-2">{{ flight_detail.arrival.airportName }} Fri, 14 Feb</h1>
+          
+          <h1 class="text-gray-600 dark:text-white text-sm">Estimated arrival</h1>
+          <h1 class="text-gray-800 dark:text-white text-lg font-semibold mb-2">{{ flight_detail.arrival.estimatedTime }}</h1>
+  
+          <h1 class="text-gray-600 dark:text-white text-sm">Scheduled departure {{ flight_detail.arrival.scheduledTime }}</h1>
+        </div>
+  
+        <!-- icon -->
+        <div class="">
+          <svg class="w-8 h-8" viewBox="0 0 32 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.26185 6.09547L7.93296 4.84325C7.77247 4.50312 7.27278 3.76776 6.55791 3.54743C5.66433 3.27201 4.08915 3.34927 3.65124 5.85568C3.21334 8.36208 2.89828 10.2067 3.01121 10.9259C3.01607 10.9569 3.02097 10.989 3.02602 11.0221C3.13852 11.759 3.32949 13.0101 4.90139 13.577C6.21542 14.051 20.5005 19.1336 27.4788 21.6156C28.2456 21.8857 29.9753 22.0626 30.7599 20.6091C31.7085 18.8519 31.0113 18.0955 29.5215 16.4792C29.471 16.4243 29.4195 16.3685 29.3671 16.3116L27.1797 13.9339C27.0265 13.8005 26.5893 13.4711 26.0662 13.2206C25.5431 12.9702 23.0783 11.7623 21.9113 11.1897C21.7872 11.121 21.5056 10.8679 21.3724 10.4051C21.2393 9.94221 19.9102 5.10426 19.2624 2.74314C19.02 2.08203 18.173 0.763756 16.7243 0.779591C14.9133 0.799385 13.778 1.7524 13.8453 4.70858C13.8992 7.07352 13.9192 8.26841 13.9225 8.57024C13.9714 8.9216 13.8813 9.55933 13.13 9.29937C12.3787 9.03941 10.2518 8.25847 9.28223 7.90049C9.07947 7.81265 8.64067 7.52125 8.50753 7.05841C8.37438 6.59556 8.28827 6.2236 8.26185 6.09547ZM0 25.0001H31.7692V23.1155H0V25.0001Z" fill="#41EDCE"/>
+          </svg>
+        </div>
+      </div>
+  
+      <div class="bg-slate-100 dark:bg-slate-950 p-4 flex items-center py-2">
+        <div class="flex flex-col flex-1">
+          <h1 class="text-gray-600 dark:text-white text-xs">Terminal</h1>
+          <h1 class="text-gray-800 dark:text-white text-lg font-semibold">{{ flight_detail.arrival.terminal }}</h1>
+        </div>
+  
+        <div class="flex flex-col flex-1">
+          <h1 class="text-gray-600 dark:text-white text-xs">Gate</h1>
+          <h1 class="text-gray-800 dark:text-white text-lg font-semibold">{{ flight_detail.arrival.gate }}</h1>
+        </div>
+  
+        <div class="flex flex-col flex-1">
+          <h1 class="text-gray-600 dark:text-white text-xs whitespace-normal">Baggage Claim</h1>
+          <h1 class="text-gray-800 dark:text-white text-lg font-semibold">{{ flight_detail.arrival.baggageClaim }}</h1>
+        </div>
+      </div>
+    </div>
+  }
+
+
+
+  
+
+</div>

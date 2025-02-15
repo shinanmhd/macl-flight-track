@@ -1,0 +1,153 @@
+<ion-header [translucent]="true" class="ion-no-border bg-night-blue dark:bg-night-blue">
+  <ion-toolbar color="translucent">
+    <div class="flex items-center justify-between pt-6 pb-4 px-4">
+      <h1 class="text-white dark:text-white text-2xl font-medium">Good Morning</h1>
+
+      <a class="cursor-pointer p-2" routerLink="/tabs/settings">
+        <svg class="w-4 h-4 text-white dark:text-slate-50" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M5.9 11.327H0.64917C0.30417 11.327 0.0241699 11.047 0.0241699 10.702C0.0241699 10.357 0.30417 10.077 0.64917 10.077H5.9C6.245 10.077 6.525 10.357 6.525 10.702C6.525 11.047 6.245 11.327 5.9 11.327" fill="currentColor"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4924 3.25H8.24243C7.89743 3.25 7.61743 2.97 7.61743 2.625C7.61743 2.28 7.89743 2 8.24243 2H13.4924C13.8374 2 14.1174 2.28 14.1174 2.625C14.1174 2.97 13.8374 3.25 13.4924 3.25" fill="currentColor"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M2.59392 1.24966C1.85309 1.24966 1.24976 1.84633 1.24976 2.5805C1.24976 3.31383 1.85309 3.90966 2.59392 3.90966C3.33559 3.90966 3.93809 3.31383 3.93809 2.5805C3.93809 1.84633 3.33559 1.24966 2.59392 1.24966M2.59392 5.15966C1.16392 5.15966 -0.000244141 4.003 -0.000244141 2.5805C-0.000244141 1.158 1.16392 -0.000335693 2.59392 -0.000335693C4.02476 -0.000335693 5.18809 1.158 5.18809 2.5805C5.18809 4.003 4.02476 5.15966 2.59392 5.15966" fill="currentColor"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9898 9.33967C11.2481 9.33967 10.6448 9.93634 10.6448 10.6697C10.6448 11.4038 11.2481 11.9997 11.9898 11.9997C12.7306 11.9997 13.3331 11.4038 13.3331 10.6697C13.3331 9.93634 12.7306 9.33967 11.9898 9.33967M11.9898 13.2497C10.5589 13.2497 9.39478 12.0922 9.39478 10.6697C9.39478 9.24717 10.5589 8.08967 11.9898 8.08967C13.4198 8.08967 14.5831 9.24717 14.5831 10.6697C14.5831 12.0922 13.4198 13.2497 11.9898 13.2497" fill="currentColor"/>
+          </svg>        
+      </a>
+
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<div class="h-full w-full flex flex-col overflow-y-scroll">
+  
+  @for (flight of flights; track flight) {
+  <div class="w-full flex flex-col p-4 gap-y-1 transition-all" (click)="presentModal(flight)">
+    
+    <div class="w-full flex items-center justify-between">
+      <h1 class="text-gray-800 dark:text-white">{{ flight.airline }} {{ flight.flightCode }}</h1>
+      <div class="rounded-md px-2 p-1.5 text-white text-xs font-medium" [ngStyle]="{'background-color': flight.status.color}">
+        {{ flight.status.name }}
+      </div>
+    </div>
+
+    <div class="flex items-start justify-between gap-x-8">
+      
+      <div class="flex flex-col">
+        <div class="text-3xl font-black text-night-blue dark:text-white">{{ flight.fromCountry }}</div>
+        <div class="text-sm font-light text-night-blue dark:text-white">{{ flight.fromTime }}</div>
+      </div>
+
+      <div class="items-center flex flex-col flex-grow pt-2">
+        <div class="text-sm font-light text-night-blue dark:text-white">{{ flight.tripDuration }}</div>
+        
+        <div class="w-full flex items-center justify-between">
+          <div class="w-2 h-2 rounded-full bg-gray-300">&nbsp;</div>
+          <div class="w-full h-0.5 bg-gray-300 flex-grow">&nbsp;</div>
+          <div class="w-2 h-2 rounded-full bg-gray-300">&nbsp;</div>
+        </div>
+
+      </div>
+
+      <div class="flex flex-col">
+        <div class="text-3xl font-black text-night-blue dark:text-white">{{ flight.toCountry }}</div>
+        <div class="text-sm font-light text-night-blue dark:text-white">{{ flight.toTime }}</div>
+      </div>
+      
+    </div>
+
+  </div>
+
+  <div class="bg-gray-200/50 dark:bg-slate-900/30 border-b border-gray-200 dark:border-slate-900/80 py-2 px-6 flex items-center justify-between">
+    <div class="flex flex-col flex-1">
+      <div class="text-sm font-light text-gray-400 dark:text-white">Terminal</div>
+      <div class="text-base font-medium text-night-blue dark:text-white">{{ flight.terminal }}</div>
+    </div>
+
+    <div class="flex flex-col flex-1">
+      <div class="text-sm font-light text-gray-400 dark:text-white">Gate</div>
+      <div class="text-base font-medium text-night-blue dark:text-white">{{ flight.gate }}</div>
+    </div>
+
+    <div class="flex flex-col flex-1">
+      <div class="text-sm font-light text-gray-400 dark:text-white">Updated</div>
+      <div class="text-base font-medium text-night-blue dark:text-white">{{ flight.updated }}</div>
+    </div>
+
+    <div class="flex">
+      <a href="#" class="rounded-full p-2 bg-aqua-maring">
+        <svg class="w-3 h-3" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.613 7.86538H0.0769348V6.13461H10.613L5.76684 1.28846L7.00001 0.0769196L13.9231 7L7.00001 13.9231L5.76684 12.7115L10.613 7.86538Z" fill="#010562"/>
+        </svg>          
+      </a>
+    </div>
+
+  </div>
+  }
+
+
+  <!-- Loading skeleton -->
+   @if(loading) {
+    @for(charset of "this"; track charset; let index = $index) {
+      <div class="w-full flex flex-col p-4 gap-y-1 animate-pulse opacity-10 delay-{{ index*200 }} transition-all">
+    
+        <div class="w-full flex items-center justify-between">
+          <div class="text-gray-800 dark:text-white h-4 w-24 bg-gray-200 dark:bg-slate-600"></div>
+          <div class="rounded-md px-2 p-1.5 h-8 w-24 text-white text-xs font-medium bg-gray-200 dark:bg-slate-600">
+            <!-- {{ flight.status.name }} -->
+          </div>
+        </div>
+    
+        <div class="flex items-start justify-between gap-x-8">
+          
+          <div class="flex flex-col">
+            <div class="text-3xl font-black text-night-blue dark:text-white bg-gray-200 dark:bg-slate-600 w-16">&nbsp;<!-- {{ flight.fromCountry }} --></div>
+            <div class="text-sm font-light text-night-blue dark:text-white bg-gray-200 dark:bg-slate-600 w-8 mt-2 h-3"><!-- {{ flight.fromTime }} --></div>
+          </div>
+    
+          <div class="items-center flex flex-col flex-grow pt-2">
+            <div class="text-sm font-light text-night-blue dark:text-white"><!-- {{ flight.tripDuration }} --></div>
+            
+            <div class="w-full flex items-center justify-between">
+              <div class="w-2 h-2 rounded-full bg-gray-200 dark:bg-slate-600">&nbsp;</div>
+              <div class="w-full h-0.5 bg-gray-200 dark:bg-slate-600 flex-grow">&nbsp;</div>
+              <div class="w-2 h-2 rounded-full bg-gray-200 dark:bg-slate-600">&nbsp;</div>
+            </div>
+    
+          </div>
+    
+          <div class="flex flex-col">
+            <div class="text-3xl font-black text-night-blue dark:text-white bg-gray-200 dark:bg-slate-600 w-16">&nbsp;<!-- {{ flight.toCountry }} --></div>
+            <div class="text-sm font-light text-night-blue dark:text-white bg-gray-200 dark:bg-slate-600 w-8 mt-2 h-3"><!-- {{ flight.toTime }} --></div>
+          </div>
+          
+        </div>
+    
+      </div>
+    
+      <div class="bg-gray-200/10 dark:bg-slate-900/30 border-b border-gray-200 dark:border-slate-900/80 py-2 px-6 flex items-center justify-between animate-pulse transition-all">
+        <div class="flex flex-col flex-1 opacity-40">
+          <div class="text-sm font-light text-gray-400 dark:text-white bg-gray-200 dark:bg-slate-600 w-8 mt-2 h-2">&nbsp;</div>
+          <div class="text-base font-medium text-night-blue dark:text-white bg-gray-200 dark:bg-slate-600 w-16 mt-1 h-4"><!-- {{ flight.terminal }} --></div>
+        </div>
+    
+        <div class="flex flex-col flex-1 opacity-40">
+          <div class="text-sm font-light text-gray-400 dark:text-white bg-gray-200 dark:bg-slate-600 w-8 mt-2 h-2">&nbsp;</div>
+          <div class="text-base font-medium text-night-blue dark:text-white bg-gray-200 dark:bg-slate-600 w-16 mt-1 h-4"><!-- {{ flight.gate }} --></div>
+        </div>
+    
+        <div class="flex flex-col flex-1 opacity-40">
+          <div class="text-sm font-light text-gray-400 dark:text-white bg-gray-200 dark:bg-slate-600 w-8 mt-2 h-2">&nbsp;</div>
+          <div class="text-base font-medium text-night-blue dark:text-white bg-gray-200 dark:bg-slate-600 w-16 mt-1 h-4"><!-- {{ flight.updated }} --></div>
+        </div>
+    
+        <div class="flex opacity-40">
+          <a href="#" class="rounded-full p-2 bg-gray-200 dark:bg-slate-600">
+            <div class="w-3 h-3">&nbsp;</div>         
+          </a>
+        </div>
+    
+      </div>
+    }
+   }
+
+</div>
+
+

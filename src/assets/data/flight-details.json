@@ -1,0 +1,372 @@
+[
+  {
+    "id": 1,
+    "flightCode": "MV201",
+    "airline": "Maldivian",
+    "departure": {
+      "airportCode": "KUL",
+      "airportName": "Kuala Lumpur International Airport",
+      "estimatedTime": "11:15 am",
+      "scheduledTime": "11:00 am",
+      "terminal": "1",
+      "gate": "D4",
+      "checkinCounter": "C12-C15"
+    },
+    "arrival": {
+      "airportCode": "MDV",
+      "airportName": "Velana International Airport",
+      "estimatedTime": "12:15 pm",
+      "scheduledTime": "12:00 pm",
+      "terminal": "1",
+      "gate": "A2",
+      "baggageClaim": "Belt 3"
+    }
+  },
+  {
+    "id": 2,
+    "flightCode": "SL102",
+    "airline": "SriLankan Airlines",
+    "departure": {
+      "airportCode": "CMB",
+      "airportName": "Bandaranaike International Airport",
+      "estimatedTime": "12:45 pm",
+      "scheduledTime": "12:30 pm",
+      "terminal": "2",
+      "gate": "A2",
+      "checkinCounter": "A8-A11"
+    },
+    "arrival": {
+      "airportCode": "MDV",
+      "airportName": "Velana International Airport",
+      "estimatedTime": "1:45 pm",
+      "scheduledTime": "1:30 pm",
+      "terminal": "2",
+      "gate": "B5",
+      "baggageClaim": "Belt 7"
+    }
+  },
+  {
+    "id": 3,
+    "flightCode": "EK303",
+    "airline": "Emirates",
+    "departure": {
+      "airportCode": "DXB",
+      "airportName": "Dubai International Airport",
+      "estimatedTime": "4:00 pm",
+      "scheduledTime": "4:00 pm",
+      "terminal": "3",
+      "gate": "B7",
+      "checkinCounter": "B20-B25"
+    },
+    "arrival": {
+      "airportCode": "MDV",
+      "airportName": "Velana International Airport",
+      "estimatedTime": "7:00 pm",
+      "scheduledTime": "7:00 pm",
+      "terminal": "3",
+      "gate": "C1",
+      "baggageClaim": "Belt 1"
+    }
+  },
+  {
+    "id": 4,
+    "flightCode": "QR404",
+    "airline": "Qatar Airways",
+    "departure": {
+      "airportCode": "DOH",
+      "airportName": "Hamad International Airport",
+      "estimatedTime": "9:45 am",
+      "scheduledTime": "9:30 am",
+      "terminal": "1",
+      "gate": "C3",
+      "checkinCounter": "D5-D9"
+    },
+    "arrival": {
+      "airportCode": "MDV",
+      "airportName": "Velana International Airport",
+      "estimatedTime": "12:45 pm",
+      "scheduledTime": "12:30 pm",
+      "terminal": "1",
+      "gate": "D7",
+      "baggageClaim": "Belt 5"
+    }
+  },
+  {
+    "id": 5,
+    "flightCode": "BA505",
+    "airline": "British Airways",
+    "departure": {
+      "airportCode": "LHR",
+      "airportName": "London Heathrow Airport",
+      "estimatedTime": "2:15 pm",
+      "scheduledTime": "2:00 pm",
+      "terminal": "5",
+      "gate": "E1",
+      "checkinCounter": "E12-E18"
+    },
+    "arrival": {
+      "airportCode": "MDV",
+      "airportName": "Velana International Airport",
+      "estimatedTime": "10:15 pm",
+      "scheduledTime": "10:00 pm",
+      "terminal": "5",
+      "gate": "F3",
+      "baggageClaim": "Belt 2"
+    }
+  },
+  {
+    "id": 6,
+    "flightCode": "SQ606",
+    "airline": "Singapore Airlines",
+    "departure": {
+      "airportCode": "SIN",
+      "airportName": "Singapore Changi Airport",
+      "estimatedTime": "10:00 am",
+      "scheduledTime": "10:00 am",
+      "terminal": "2",
+      "gate": "F5",
+      "checkinCounter": "G2-G7"
+    },
+    "arrival": {
+      "airportCode": "MDV",
+      "airportName": "Velana International Airport",
+      "estimatedTime": "1:00 pm",
+      "scheduledTime": "1:00 pm",
+      "terminal": "2",
+      "gate": "G9",
+      "baggageClaim": "Belt 6"
+    }
+  },
+  {
+    "id": 7,
+    "flightCode": "LH707",
+    "airline": "Lufthansa",
+    "departure": {
+      "airportCode": "FRA",
+      "airportName": "Frankfurt Airport",
+      "estimatedTime": "6:10 am",
+      "scheduledTime": "6:00 am",
+      "terminal": "1",
+      "gate": "G2",
+      "checkinCounter": "H8-H12"
+    },
+    "arrival": {
+      "airportCode": "MDV",
+      "airportName": "Velana International Airport",
+      "estimatedTime": "2:10 pm",
+      "scheduledTime": "2:00 pm",
+      "terminal": "1",
+      "gate": "H4",
+      "baggageClaim": "Belt 4"
+    }
+  },
+  {
+    "id": 8,
+    "flightCode": "AF808",
+    "airline": "Air France",
+    "departure": {
+      "airportCode": "CDG",
+      "airportName": "Charles de Gaulle Airport",
+      "estimatedTime": "1:00 pm",
+      "scheduledTime": "1:00 pm",
+      "terminal": "2",
+      "gate": "H8",
+      "checkinCounter": "I5-I10"
+    },
+    "arrival": {
+      "airportCode": "MDV",
+      "airportName": "Velana International Airport",
+      "estimatedTime": "9:00 pm",
+      "scheduledTime": "9:00 pm",
+      "terminal": "2",
+      "gate": "I1",
+      "baggageClaim": "Belt 8"
+    }
+  },
+  {
+    "id": 9,
+    "flightCode": "KL909",
+    "airline": "KLM",
+    "departure": {
+      "airportCode": "AMS",
+      "airportName": "Amsterdam Airport Schiphol",
+      "estimatedTime": "8:20 am",
+      "scheduledTime": "8:00 am",
+      "terminal": "3",
+      "gate": "I4",
+      "checkinCounter": "J2-J6"
+    },
+    "arrival": {
+      "airportCode": "MDV",
+      "airportName": "Velana International Airport",
+      "estimatedTime": "4:20 pm",
+      "scheduledTime": "4:00 pm",
+      "terminal": "3",
+      "gate": "J8",
+      "baggageClaim": "Belt 3"
+    }
+  },
+
+
+  {
+    "id": 10,
+    "flightCode": "UA111",
+    "airline": "United Airlines",
+    "departure": {
+      "airportCode": "SFO",
+      "airportName": "San Francisco International Airport",
+      "estimatedTime": "9:15 am",
+      "scheduledTime": "9:00 am",
+      "terminal": "3",
+      "gate": "K12",
+      "checkinCounter": "L5-L11"
+    },
+    "arrival": {
+      "airportCode": "MDV",
+      "airportName": "Velana International Airport",
+      "estimatedTime": "5:15 pm",
+      "scheduledTime": "5:00 pm",
+      "terminal": "1",
+      "gate": "M2",
+      "baggageClaim": "Belt 7"
+    }
+  },
+  {
+    "id": 11,
+    "flightCode": "AC222",
+    "airline": "Air Canada",
+    "departure": {
+      "airportCode": "YYZ",
+      "airportName": "Toronto Pearson International Airport",
+      "estimatedTime": "2:30 pm",
+      "scheduledTime": "2:00 pm",
+      "terminal": "1",
+      "gate": "P7",
+      "checkinCounter": "Q1-Q6"
+    },
+    "arrival": {
+      "airportCode": "MDV",
+      "airportName": "Velana International Airport",
+      "estimatedTime": "10:30 pm",
+      "scheduledTime": "10:00 pm",
+      "terminal": "1",
+      "gate": "R9",
+      "baggageClaim": "Belt 3"
+    }
+  },
+  {
+    "id": 12,
+    "flightCode": "CX333",
+    "airline": "Cathay Pacific",
+    "departure": {
+      "airportCode": "HKG",
+      "airportName": "Hong Kong International Airport",
+      "estimatedTime": "10:15 am",
+      "scheduledTime": "10:00 am",
+      "terminal": "2",
+      "gate": "S3",
+      "checkinCounter": "T8-T14"
+    },
+    "arrival": {
+      "airportCode": "MDV",
+      "airportName": "Velana International Airport",
+      "estimatedTime": "6:15 pm",
+      "scheduledTime": "6:00 pm",
+      "terminal": "2",
+      "gate": "U5",
+      "baggageClaim": "Belt 1"
+    }
+  },
+  {
+    "id": 13,
+    "flightCode": "QF444",
+    "airline": "Qantas",
+    "departure": {
+      "airportCode": "SYD",
+      "airportName": "Sydney Airport",
+      "estimatedTime": "6:45 am",
+      "scheduledTime": "6:00 am",
+      "terminal": "1",
+      "gate": "V11",
+      "checkinCounter": "W2-W7"
+    },
+    "arrival": {
+      "airportCode": "MDV",
+      "airportName": "Velana International Airport",
+      "estimatedTime": "2:45 pm",
+      "scheduledTime": "2:00 pm",
+      "terminal": "1",
+      "gate": "X3",
+      "baggageClaim": "Belt 6"
+    }
+  },
+  {
+    "id": 14,
+    "flightCode": "NZ555",
+    "airline": "Air New Zealand",
+    "departure": {
+      "airportCode": "AKL",
+      "airportName": "Auckland Airport",
+      "estimatedTime": "11:30 am",
+      "scheduledTime": "11:00 am",
+      "terminal": "I",
+      "gate": "Y8",
+      "checkinCounter": "Z9-Z15"
+    },
+    "arrival": {
+      "airportCode": "MDV",
+      "airportName": "Velana International Airport",
+      "estimatedTime": "7:30 pm",
+      "scheduledTime": "7:00 pm",
+      "terminal": "I",
+      "gate": "A6",
+      "baggageClaim": "Belt 2"
+    }
+  },
+  {
+    "id": 15,
+    "flightCode": "BR666",
+    "airline": "EVA Air",
+    "departure": {
+      "airportCode": "TPE",
+      "airportName": "Taiwan Taoyuan International Airport",
+      "estimatedTime": "3:45 pm",
+      "scheduledTime": "3:00 pm",
+      "terminal": "2",
+      "gate": "A5",
+      "checkinCounter": "B1-B7"
+    },
+    "arrival": {
+      "airportCode": "MDV",
+      "airportName": "Velana International Airport",
+      "estimatedTime": "11:45 pm",
+      "scheduledTime": "11:00 pm",
+      "terminal": "2",
+      "gate": "C4",
+      "baggageClaim": "Belt 8"
+    }
+  },
+  {
+    "id": 16,
+    "flightCode": "VN777",
+    "airline": "Vietnam Airlines",
+    "departure": {
+      "airportCode": "HAN",
+      "airportName": "Noi Bai International Airport",
+      "estimatedTime": "8:00 am",
+      "scheduledTime": "8:00 am",
+      "terminal": "E",
+      "gate": "D2",
+      "checkinCounter": "E3-E9"
+    },
+    "arrival": {
+      "airportCode": "MDV",
+      "airportName": "Velana International Airport",
+      "estimatedTime": "4:00 pm",
+      "scheduledTime": "4:00 pm",
+      "terminal": "E",
+      "gate": "F7",
+      "baggageClaim": "Belt 5"
+    }
+  }
+]
